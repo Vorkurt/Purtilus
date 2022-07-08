@@ -1,0 +1,14 @@
+.vorkurt__container-template {
+  div div:hover {
+    background: #316dca;
+
+    button {
+      color: #adbac7;
+    }
+  }
+
+  button {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

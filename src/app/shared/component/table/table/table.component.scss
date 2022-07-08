@@ -1,0 +1,95 @@
+elix-table {
+  transition: all 0.5s ease-in;
+  color: var(--primary-color-text);
+
+  mat-table {
+    color: transparent;
+    border-collapse: collapse;
+    border-radius: 0.5em 0.5em 0 0;
+    overflow: hidden;
+  }
+
+  .header-border-left {
+    border-left: 1px solid;
+  }
+
+  mat-header-row {
+    mat-header-cell {
+      justify-content: flex-start;
+      border-spacing: 2rem;
+    }
+  }
+
+  mat-row {
+    transition: all ease-in-out 0.1s;
+    color: var(--primary-color-text);
+    min-height: 19px;
+    position: relative;
+
+    textarea {
+      outline: none;
+    }
+
+    &:hover {
+      background: rgba(1, 1, 222, 0.1);
+    }
+
+    mat-cell {
+      justify-content: flex-start;
+      position: relative;
+      min-height: 1rem;
+      mat-form-field {
+        div {
+          padding: 0 !important;
+          border: 0 !important;
+          input {
+            border: 1px solid;
+            box-shadow: inset 0px 0px 3px 1px rgb(0 0 255 / 20%);
+          }
+        }
+      }
+      textarea {
+        background: inherit;
+        height: 1.95rem;
+
+        &:focus-visible {
+          outline: none;
+          border: 1px solid var(--primary-color-input);
+        }
+      }
+    }
+  }
+
+  mat-header-row {
+    min-height: 1.5rem;
+
+    mat-header-cell {
+      min-height: inherit;
+    }
+  }
+
+  mat-header-cell {
+    color: var(--primary-color-text) !important;
+  }
+
+  .header-color {
+    background: #2d333b;
+    z-index: 99 !important;
+  }
+
+  .mat-form-field-infix {
+    width: auto;
+  }
+
+  .example-detail-row {
+    min-height: 0 !important;
+
+    mat-cell {
+      min-height: inherit;
+
+      .mat-form-field-infix {
+        width: auto !important;
+      }
+    }
+  }
+}

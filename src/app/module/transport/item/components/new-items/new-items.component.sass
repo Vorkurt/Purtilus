@@ -1,0 +1,24 @@
+.package__item-content
+  border: 1px solid
+  overflow: auto
+
+  .item-branch
+    .package__item-content-child
+      display: flex
+      justify-content: space-between
+      text-transform: capitalize
+      height: 84vh
+
+      .item-background__input
+        background: var(--secondary-input-background)
+
+      .package__item__content-per
+        display: flex
+        flex-direction: column
+        justify-content: space-around
+
+        .example-margin
+          &:not(:checked)
+            border: 1px solid var(--second-primary-text)
+            border-radius: .3rem
+            outline: none

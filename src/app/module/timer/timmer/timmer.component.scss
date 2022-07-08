@@ -1,0 +1,29 @@
+.vorkurt__padding-button {
+  width: 10rem;
+  div {
+    display: flex;
+    justify-content: center;
+
+    button {
+      padding-right: 0px !important;
+      padding-left: 0px !important;
+      margin-bottom: 2rem;
+
+      .mat-button-wrapper {
+        background: red !important;
+      }
+    }
+  }
+}
+
+.mat-icon {
+  height: 3.562rem !important;
+  width: 3.562rem !important;
+}
+
+@media (max-width: 640px) {
+  .mat-icon,
+  .timer {
+    font-size: 1.831rem !important;
+  }
+}
