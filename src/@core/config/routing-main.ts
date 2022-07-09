@@ -21,4 +21,20 @@ export const CONFIG_MAIN = Object.freeze({
       } as ActionConfig,
     ],
   } as EntityConfig,
+  pack: {
+    buttons: [
+      {
+        action: StateEnum.ADDED,
+        exists: true,
+        path: 'new-pack',
+        title: 'Add new Pack',
+      } as ActionConfig,
+      {
+        action: StateEnum.EDIT,
+        exists: true,
+        path: 'edit-pack',
+        title: 'Edit Pack',
+      } as ActionConfig,
+    ],
+  } as EntityConfig,
 });

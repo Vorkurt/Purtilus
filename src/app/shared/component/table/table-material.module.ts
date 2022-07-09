@@ -15,6 +15,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { ColumnNumberComponent } from './columns/column-number/column-number.component';
 import { ColumnSelectComponent } from './columns/column-select/column-select.component';
 import { MatSelectModule } from '@angular/material/select';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import {LayoutModule} from '@angular/cdk/layout';
 
 @NgModule({
   declarations: [
@@ -28,14 +30,16 @@ import { MatSelectModule } from '@angular/material/select';
   ],
   imports: [
     CommonModule,
+    FormsModule,
     MatButtonModule,
     MatFormFieldModule,
     MatIconModule,
     MatInputModule,
-    FormsModule,
     MatTableModule,
-    SharedModule,
     MatSelectModule,
+    MatPaginatorModule,
+    LayoutModule,
+    SharedModule,
   ],
   exports: [
     TableComponent,

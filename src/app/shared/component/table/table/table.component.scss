@@ -57,6 +57,10 @@ elix-table {
           border: 1px solid var(--primary-color-input);
         }
       }
+      button {
+        padding: 0 !important;
+        min-width: auto !important;
+      }
     }
   }
 

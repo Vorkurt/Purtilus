@@ -31,6 +31,7 @@ export interface Car {
 }
 
 export interface Package {
+  id:number;
   consignee: Consignee;
   note: string;
   typeBox: TypeBox;

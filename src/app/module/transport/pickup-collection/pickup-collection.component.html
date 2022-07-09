@@ -1,1 +1,56 @@
-<div>test</div>
+<elix-table
+  [dataSource]="dataSourcePacks"
+  *ngIf="dataSourcePacks.length"
+  [showPagination]="true"
+  [lenghtPagination]="pageOfEntrys.countEntries"
+  (onPaginationChange)="onChangePagination($event)"
+  paginationClass="pickup-row__pagination"
+>
+  <elix-column-text
+    className="consigne-street"
+    [iconClass]="'elixir'"
+    field="consigneeStreet"
+    name="Consignee Street"
+  ></elix-column-text>
+  <elix-column-text
+    className="consigne-number-house"
+    [iconClass]="'elixir'"
+    field="consigneeNumberHouse"
+    name="Consignee Number House"
+  ></elix-column-text>
+  <elix-column-text
+    className="consigne-postal-code"
+    [iconClass]="'elixir'"
+    field="consigneePostalCode"
+    name="Consignee Postal Code"
+  ></elix-column-text>
+  <elix-column-text
+    className="package-postal-street"
+    [iconClass]="'elixir'"
+    field="packagePostalStreet"
+    name="Package Postal Street"
+  ></elix-column-text>
+  <elix-column-text
+    className="postal-package-city"
+    [iconClass]="'elixir'"
+    field="packageCity"
+    name="Package Postal City"
+  ></elix-column-text>
+  <elix-column-text
+    className="package-postal-code"
+    [iconClass]="'elixir'"
+    field="packagePostalCode"
+    name="Package Postal Code"
+  ></elix-column-text>
+  <elix-column-area-text
+    className="note"
+    field="note"
+    name="Note"
+  ></elix-column-area-text>
+  <elix-column-icon-action
+    className="action"
+    name="Action"
+    field="action"
+    iconClass="fa_solid:sort-down"
+  ></elix-column-icon-action>
+</elix-table>

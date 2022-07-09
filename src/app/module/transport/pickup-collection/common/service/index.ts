@@ -1,0 +1,1 @@
+export * from './resolver/get-packs.resolver'

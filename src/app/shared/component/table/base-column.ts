@@ -6,20 +6,24 @@ import { MatColumnDef } from '@angular/material/table';
   template: '',
 })
 export abstract class BaseColumn {
-  @ViewChild(MatColumnDef) columnDef: MatColumnDef;
+  @ViewChild(MatColumnDef)
+  public columnDef: MatColumnDef;
 
   @Input()
-  name: string;
+  public name: string;
 
   @Input()
-  field: string;
+  public field: string;
 
   @Input()
-  className: string;
+  public className: string;
 
   @Input()
-  iconClass: string;
+  public iconClass: string;
 
   @Input()
   public editRow: boolean = false;
+
+  @Input()
+  public footerMessage: string | number | null;
 }

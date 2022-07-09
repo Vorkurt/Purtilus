@@ -12,7 +12,6 @@ import { ItemsTooltipComponent } from './tooltip/items-tooltip/items-tooltip.com
 import { NewItemsComponent } from './components/new-items/new-items.component';
 import { ListItemsComponent } from './components/list-items/list-items.component';
 import { TableMaterialModule } from '../../../shared/component/table/table-material.module';
-import { MatTableModule } from '@angular/material/table';
 import { PortalModule } from '@angular/cdk/portal';
 
 @NgModule({

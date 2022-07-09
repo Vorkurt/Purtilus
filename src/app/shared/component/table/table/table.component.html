@@ -1,4 +1,4 @@
-<mat-table mat-table [dataSource]="dataSource" multiTemplateDataRows="true">
+<mat-table mat-table [dataSource]="dataSource" multiTemplateDataRows="true" >
   <ng-content></ng-content>
   <mat-header-row
     class="header-color gap-1"
@@ -10,6 +10,16 @@
     *matRowDef="let row; columns: columnsToDispaly"
     class="gap-1 header-border-left"
   ></mat-row>
+
+  <!-- Footer for tabel -->
+  <ng-container *ngIf="footerShow">
+    <mat-footer-row
+      [class]="footerMessageClass"
+      *matFooterRowDef="columnsToDispaly"
+      [attr.colspan]="columnsToDispaly.length"
+    >
+    </mat-footer-row>
+  </ng-container>
 
   <!--  Extanble-->
   <ng-container *ngIf="extensible">
@@ -41,3 +51,13 @@
     ></mat-row>
   </ng-container>
 </mat-table>
+<mat-paginator
+  [class]="paginationClass"
+  *ngIf="showPagination"
+  (page)="changePage($event)"
+  [length]="lenghtPagination"
+  [pageSizeOptions]="[5, 10, 20]"
+  showFirstLastButtons
+  aria-label="Select page of periodic elements"
+>
+</mat-paginator>
