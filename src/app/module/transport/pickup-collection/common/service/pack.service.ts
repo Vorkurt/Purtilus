@@ -4,6 +4,7 @@ import { PageEvent } from '@angular/material/paginator';
 import { Subject } from 'rxjs';
 import { ContractDataForPackage } from 'src/app/shared/utils/interfaces';
 import { environment } from 'src/environments/environment';
+import {TooglePackage} from "../enum";
 
 @Injectable({
   providedIn: 'root',
@@ -24,4 +25,14 @@ export class PackService {
         this.dataPacks.next(contract);
       });
   }
+
+  public sendStatusPackage(packId: number, statusCode: TooglePackage)
+   {
+    return this._httpClient
+      .post<ContractDataForPackage>(
+        `${environment.apiUrl}api/transport/pack/${packId}`, statusCode
+      )
+      .subscribe(contract => contract);
+  }
+
 }
