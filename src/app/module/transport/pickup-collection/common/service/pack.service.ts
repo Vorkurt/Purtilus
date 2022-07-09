@@ -14,7 +14,7 @@ export class PackService {
   constructor(private readonly _httpClient: HttpClient) {}
 
   public getAllPacks(
-    paginationDetail: PageEvent = { pageIndex: 1, pageSize: 5 } as PageEvent,
+    paginationDetail: PageEvent = { pageIndex: 0, pageSize: 5 } as PageEvent,
   ): void {
     this._httpClient
       .get<ContractDataForPackage>(
