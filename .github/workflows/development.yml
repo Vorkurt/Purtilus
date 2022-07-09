@@ -28,7 +28,7 @@ jobs:
         run: npm i -g npm@7
 
       - name: "📦 install dependencies"
-        run: npm ci
+        run: npm ci --force
 
       - name: "🚀 static app"
         run: npm run build
