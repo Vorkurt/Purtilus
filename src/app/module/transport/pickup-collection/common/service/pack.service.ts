@@ -32,7 +32,9 @@ export class PackService {
       .post<ContractDataForPackage>(
         `${environment.apiUrl}api/transport/pack/${packId}`, statusCode
       )
-      .subscribe(contract => contract);
+      .subscribe(contract => {
+        this.getAllPacks()
+      });
   }
 
 }
