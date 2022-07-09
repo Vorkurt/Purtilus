@@ -1,5 +1,3 @@
 export enum TooglePackage {
-  DELIVERED,
-  HOLD,
-  DENIED
+  DELIVERED = " DELIVERED", HOLD = "HOLD", DENIED = "DENIED"
 }

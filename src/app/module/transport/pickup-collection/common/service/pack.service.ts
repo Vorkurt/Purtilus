@@ -17,16 +17,20 @@ export class PackService {
   public getAllPacks(
     paginationDetail: PageEvent = { pageIndex: 0, pageSize: 5 } as PageEvent,
   ): void {
+    console.log(TooglePackage.DELIVERED)
     this._httpClient
       .get<ContractDataForPackage>(
         `${environment.apiUrl}api/transport/pack?pageSize=${paginationDetail.pageSize}&pageNo=${paginationDetail.pageIndex}`,
       )
       .subscribe((contract: ContractDataForPackage) => {
+       contract.entries = contract.entries.filter((resp: any) => resp.statusPack === "DELIVERED" || resp.statusPack === "HOLD")
+
+
         this.dataPacks.next(contract);
       });
   }
 
-  public sendStatusPackage(packId: number, statusCode: TooglePackage)
+  public sendStatusPackage(packId: number, statusCode: number)
    {
     return this._httpClient
       .post<ContractDataForPackage>(
