@@ -29,12 +29,6 @@ export const CONFIG_MAIN = Object.freeze({
         path: 'new-pack',
         title: 'Add new Pack',
       } as ActionConfig,
-      {
-        action: StateEnum.EDIT,
-        exists: true,
-        path: 'edit-pack',
-        title: 'Edit Pack',
-      } as ActionConfig,
     ],
   } as EntityConfig,
 });
