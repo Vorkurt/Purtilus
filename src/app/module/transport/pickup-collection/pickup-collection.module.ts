@@ -5,10 +5,10 @@ import { NgModule } from '@angular/core';
 import { PickupCollectionComponent } from './pickup-collection.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { TableMaterialModule } from 'src/app/shared/component';
-import { EditPackComponent } from './entry/edit-pack/edit-pack.component';
+import { NewPackComponent } from './entry/edit-pack/new-pack.component';
 
 @NgModule({
-  declarations: [PickupCollectionComponent, EditPackComponent],
+  declarations: [PickupCollectionComponent, NewPackComponent],
   imports: [
     AppPickupCollectionRouting,
     CommonModule,

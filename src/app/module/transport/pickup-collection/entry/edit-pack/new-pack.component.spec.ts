@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { EditPackComponent } from './edit-pack.component';
+import { NewPackComponent } from './new-pack.component';
 
 describe('EditPackComponent', () => {
-  let component: EditPackComponent;
-  let fixture: ComponentFixture<EditPackComponent>;
+  let component: NewPackComponent;
+  let fixture: ComponentFixture<NewPackComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ EditPackComponent ]
+      declarations: [ NewPackComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(EditPackComponent);
+    fixture = TestBed.createComponent(NewPackComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
