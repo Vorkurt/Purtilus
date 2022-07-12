@@ -97,3 +97,7 @@ e.g
 ### For run test cypress
 
 npm e2e
+
+
+## Join us on discord
+### https://discord.gg/EeaWgap3
