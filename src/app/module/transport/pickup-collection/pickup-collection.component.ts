@@ -1,13 +1,13 @@
-import { Component, OnInit } from '@angular/core';
-import { PageEvent } from '@angular/material/paginator';
-import { SpinnerStateService } from 'src/app/shared/component';
+import {Component, OnInit} from '@angular/core';
+import {PageEvent} from '@angular/material/paginator';
+import {SpinnerStateService} from 'src/app/shared/component';
 import {
   ContractDataForPackage,
   DataSourceMaterialTable,
   IActionMaterialColumn,
   Package,
 } from 'src/app/shared/utils/interfaces';
-import { PackService } from './common/service/pack.service';
+import {PackService} from './common/service/pack.service';
 
 @Component({
   selector: 'elix-pickup-collection',
@@ -22,7 +22,8 @@ export class PickupCollectionComponent implements OnInit {
   constructor(
     private readonly _spinnerStateService: SpinnerStateService,
     private readonly _packService: PackService,
-  ) {}
+  ) {
+  }
 
   public ngOnInit(): void {
     this._packService.dataPacks.subscribe((dataEntries) => {
@@ -69,24 +70,24 @@ export class PickupCollectionComponent implements OnInit {
       {
         iconClass: 'fa_solid:check',
         classCss: 'pickup-check',
-        method(row?) {
-          //TODO: Implement this delivered package
+        method: (row: DataSourceMaterialTable<Package>) => {
+          this._packService.sendStatusPackage(row.model.id, 0)
         },
       },
       {
         iconClass: 'fa_solid:hand-holding-hand',
         classCss: 'pickup-hold',
-        method(row?) {
-          // TODO: Implement this holding package
+        method: (row: DataSourceMaterialTable<Package>) => {
+          this._packService.sendStatusPackage(row.model.id, 1)
         },
       },
       {
         iconClass: 'fa_solid:xmark',
-        classCss: 'picku',
-        method(row?) {
-          // TODO: Implement this close package
+        classCss: 'pickup-denied',
+        method: (row: DataSourceMaterialTable<Package>) => {
+          this._packService.sendStatusPackage(row.model.id, 2)
         },
       },
-    ];
+    ] ;
   }
 }

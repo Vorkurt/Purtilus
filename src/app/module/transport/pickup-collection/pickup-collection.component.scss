@@ -5,4 +5,58 @@
     align-items: center;
     justify-content: flex-end;
   }
-}
+
+  .pickup-{
+    &check {
+      color: green;
+      border: 2px solid white;
+      position: relative !important;
+
+      &:hover:before {
+        border: 2px solid var(--second-primary-text);
+        border-radius: 70%;
+        position: absolute;
+        display: inline-block;
+        content: '';
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+      }
+    }
+      &hold{
+        color: var(--tertiaryPrimary);
+        border: 2px solid white;
+        position: relative !important;
+        &:hover:before{
+          border: 2px solid  var(--tertiaryPrimary);
+          border-radius: 70%;
+          position: absolute;
+          display: inline-block;
+          content: '';
+          height: 100%;
+          width: 100%;
+          top: 0;
+          left: 0;
+        }
+      }
+      &denied {
+        color: var(--deniedPrimary);
+        border: 2px solid white;
+        position: relative !important;
+
+        &:hover:before {
+          border: 2px solid var(--deniedPrimary);
+          border-radius: 70%;
+          position: absolute;
+          display: inline-block;
+          content: '';
+          height: 100%;
+          width: 100%;
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+  }
+
