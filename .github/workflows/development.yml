@@ -8,6 +8,8 @@ jobs:
     name: Build application
     runs-on: ubuntu-latest
     steps:
+      - name: "📦 lint"
+        uses: Vorkurt/infrastructure/.github/workflows/eslint.yml@geea
       - name: "☁️ checkout repository"
         uses: actions/checkout@v2
 
@@ -33,22 +35,4 @@ jobs:
       - name: "🚀 static app"
         run: npm run build
 
-  lint:
-    name: Code standards
-    runs-on: ubuntu-latest
-    steps:
-      - name: "☁️ checkout repository"
-        uses: actions/checkout@v2
-
-      - name: "🔧 setup node"
-        uses: actions/setup-node@v2.1.5
-        with:
-          node-version: 16
-
-      - name: "🔧 install npm@latest"
-        run: npm i -g npm@latest
-
-      - name: "📦 install dependencies"
-        uses: Vorkurt/infrastructure/.github/workflows/eslint.yml@geea
-
-
+ 
