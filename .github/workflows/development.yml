@@ -35,9 +35,4 @@ jobs:
         run: npm run build
 
   lint:
-    name: "Lint Application"
-    runs-on: ubuntu-latest
-    steps:
-      
-      - name: "📦 lint"
-        uses: Vorkurt/infrastructure/.github/workflows/eslint.yml@geea
+    uses: Vorkurt/infrastructure/.github/workflows/eslint.yml@geea
