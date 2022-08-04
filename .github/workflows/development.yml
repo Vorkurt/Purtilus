@@ -32,3 +32,5 @@ jobs:
 
       - name: "🚀 static app"
         run: npm run build
+      - name: "ç linter"
+        uses: Vorkurt/infrastructure/.github/workflows/eslint.yml@geea
