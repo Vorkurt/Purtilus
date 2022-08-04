@@ -8,8 +8,7 @@ jobs:
     name: Build application
     runs-on: ubuntu-latest
     steps:
-      - name: "📦 lint"
-        uses: Vorkurt/infrastructure/.github/workflows/eslint.yml@geea
+
       - name: "☁️ checkout repository"
         uses: actions/checkout@v2
 
@@ -35,4 +34,10 @@ jobs:
       - name: "🚀 static app"
         run: npm run build
 
- 
+  lint:
+    name: "Lint Application"
+    runs-on: ubuntu-latest
+    steps:
+      
+      - name: "📦 lint"
+        uses: Vorkurt/infrastructure/.github/workflows/eslint.yml@geea
